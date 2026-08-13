@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JamRoom</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>JamRoom</h1>
+
+        <div class="player-wrapper">
+            <div id="player"></div>
+        </div>
+
+        <div class="controls">
+            <!-- UI Controls for testing the Bridge API -->
+            <button onclick="window.jamPlay()">Play</button>
+            <button onclick="window.jamPause()">Pause</button>
+            <button onclick="window.jamSeek(0)">Restart</button>
+            <button onclick="window.jamLoad('dQw4w9WgXcQ', 0)">Load RickRoll</button>
+            <button onclick="let t = window.jamGetTime(); alert(t);">Get Time</button>
+        </div>
+
+        <div class="status-bar">
+            <span id="status-text">Initializing...</span> | Time: <span id="time-display">0.00s</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
